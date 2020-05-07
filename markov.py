@@ -79,8 +79,8 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.endswith('Hungry for some chanteloupes'):
-        await message.channel.send('Have no fear chanteloupe bot is here!')
+    if message.content.startswith("meh I don't like cantaloupes"):
+        await message.channel.send("Muahahha you can't elope from me")
 
 client.run(os.environ['DISCORD_TOKEN'])
 
