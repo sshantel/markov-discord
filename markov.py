@@ -3,7 +3,8 @@ import os
 import discord
 import sys
 from random import choice
-
+import emoji
+import time 
 
 def open_and_read_file(filenames):
     """Take list of files. Open them, read them, and return one long string."""
@@ -79,9 +80,12 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith("meh I don't like cantaloupes"):
-        await message.channel.send("Muahahha you can't elope from me")
+    if message.content.startswith("What's Bruno Mars' favorite song?"):
+        await message.channel.send(emoji.demojize("uptown func() :dancer:"))
 
-client.run(os.environ['DISCORD_TOKEN'])
-
+while True:
+    initial = time.time()
+    client.run(os.environ['DISCORD_TOKEN'])
+    if time.time() - initial > 10:
+        break 
 
