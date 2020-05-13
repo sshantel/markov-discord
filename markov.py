@@ -80,7 +80,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith(emoji.demojize("What do you call a scary repository :scream:")):
+    if message.content.startswith("What do you call a scary repository"):
         await message.channel.send(emoji.demojize("A cREEPO!:ghost:"))
 
 while True:
